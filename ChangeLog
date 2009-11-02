@@ -1,0 +1,146 @@
+2008.06.11
+
+* Added Juanjo Conti's patch to support unicode.
+* Fixed tons of spacing issues.
+* Started cleaning up some of the useless methods.
+* Added a missing call to writeUnicodeElement in the renderer.
+* Updated TODO.
+* Cleaned up whitespace in the renderer.
+
+2008.06.10
+
+* Updated license.
+* Updated commit script.
+
+2008.06.08
+
+* Added a dependencies file.
+* Added missing import in setup.py.
+
+2008.06.07
+
+* Added a notice in the examples directory that the examples are going away.
+* Updated the README with a note about where to lool fofr examples (the test
+directory).
+* Updated the setup.py to find all subpackages.
+
+2008.03.13
+
+* Lots of changes to the automation script.
+* Fixed a syntax error in the script.
+* Moved date var out of python script and into repo vars "script".
+* Added two more values to be passed to the python script.
+* Set the repo vars to production (non-testing) values.
+* Minor code tweaks.
+* Fixed some typos in unfinished code just to get the tests passing.
+* Added support for getting the test name in Python 2.5.
+* Updated the commit script so that tests can actually run.
+* Changed default behaviour for commit script to run tests, skipping if a flag
+is passed (as opposed to only running tests if a flag is passed).
+* Added functions to the commit script for better organziation as well as a
+check for syncing Google code to SourceForge.
+* Removed exit code 1s from python script for convenience of use/parsing by
+other scripts.
+* Removed extraneous trailing slash from scp command.
+* Updated sync script to remove gzip file when done.
+* Updated sync script with messages to stdout as well as the functionality of
+creating a local mirror if one does not already exist.
+* Commented out some testing code.
+
+2008.03.12
+
+* Added scripts for creating a local mirror and syncing that mirror from
+google.
+* Removed extraneous slashes from scripts.
+* Added more variables for use by other scripts (and changed some values for
+testing purposes).
+* Added more scripts for 1) uploading to SF.net, 2) automating the
+form-processing, and 3) controlling the whole process.
+
+2008.03.01
+
+* Started getting the rest of the tests ready.
+
+2008.02.29
+
+* Added a print statement to the generate script.
+* Moved Elements.TAB, .LINE and .RawCode into document.base.
+* Moved Elements.Text and .Inline into document.character.
+* Updated Renderer with these changes.
+* Added a paragraph test.
+* Moved character functions out of Elements and into document.character.
+* Moved character test out of paragraphs tests.
+* Added last paragraph test.
+* First-run clean-up of the character tests.
+* Added the charater tests.
+* Made some initial changes to the table tests.
+
+2008.02.28
+
+* Added a stubbed script for the generation of test RTF docs.
+* Created a place in test/sources for test RTF docs.
+* Made changes to test_all so that it can be imported by other scripts.
+* Made generalizations to test_all, reducing redundancy and increasing
+usability/reusablity.
+* Generated and checked the first reference RTF file.
+* Had to move Paragraph class into new API to avoid circular imports.
+* Renamed all *PS variables to *PropertySet and removed the short names.
+* Added two more test reference RTF files.
+* Updated section unit tests.
+* Removed Paragraph from Elements.
+* Added the next reference RTF file and finished up the last section test.
+* Moved common test case code into utils.RTFTestCase and updated the sections
+test case.
+* Cleaned up imports in section test file.
+* Cleaned up some whitespace in the paragraph file.
+* Started on the paragraph tests.
+* Did some more RTFTestCase abstraction.
+* Updated the generate script.
+* Finished the first para test.
+* Added two more paragraph tests.
+
+2008.02.27
+
+* Moved examples into test dir to serve as the basis for unit tests.
+* Added prototype RTF parsing code from Pecha project.
+* Added TextEdit test RTF files from Mac OS X.
+* Updated TODO.
+* Fixed remaining whitespace issue in setup.py.
+* Created exceptions file.
+* Split grammar into its own file.
+* Made grammar module-level variable (singleton) instead of instantiated class.
+* Updated TODO.
+* Renamed pyrtfng package to rtfng.
+* Added test runner for doctests.
+* Added test runner for all tests, and added doctest suite to the runner.
+* Added a utility module.
+* Added code for recursively adding tests.
+* Added images to be used in tests to test/resources.
+* Updated TODO.
+* Added a write method to Document as a temp fix until the refactor.
+* Started moving some code into the new API in order to avoid circular imports.
+* Removed * imports from rtfng.__init__.py.
+* Removed code from Elements that was copied into the new API.
+* Moved Elements.Standard* into PropertySets (which they all instantiate
+anyway) as part of avoiding circular imports.
+
+2008.02.26
+
+* Copied Simon Cusack's PyRTF code from version 0.45 as the starting point of
+pyrtf-ng.
+* Added ChangeLog.
+* Added admin directory and scripts.
+* Renamed package to pyrtf-ng.
+* Updated setup.py.
+* Added software license.
+* Added a placeholder test directory.
+* Added placeholders for parsing and writing code.
+* Added TODO file.
+* Updated examples to use the new package name and replaced the tabs with
+spaces.
+* Whitespace cleanup.
+* Updated TODO.
+* Fixed name in setup.py.
+* Added gzipped specs for reference.
+* Bumped the version number down until the API changes.
+* TODO reorg and updates.

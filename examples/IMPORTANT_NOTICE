@@ -1,0 +1,4 @@
+This directory is going away! All the examples are being migrated into the unit
+tests, so that they can be effectively maintained over time.
+
+For example usage, please see the test directory (and subdirectories).

@@ -1,0 +1,115 @@
+Plan
+----
+
+* DONE - Migrate examples to unit tests.
+* DONE - Add prototype parsing code and test sources.
+* DONE - Move exceptions out of parser code into dedicated exceptions file.
+* DONE - Split grammar out of parser base and into its own module.
+* DONE - Rename package from pyrtfng to rtfng.
+* DONE - Update the generate script to accept file names as parameters, thus only
+  generating RTF files for the make_() methods in those files (as opposed to
+  traversing the whole tree).
+* DONE - Add tests for the unicode support.
+* DONE - Increment to version 0.9.1
+
+* Rename varaibles to remove underscores (convert to camelCase).
+* Rename instance variables in PropertySets from UpperCamelCase to
+  lowerCamelCase.
+* Remove extraneous spaces between operators, parens, etc.
+* Add new lines where they should be (no run-ons after colons).
+* Standardize indents to be 4 spaces.
+* Remove deepcopy wherever possible.
+* Increment to version 0.9.2
+
+
+* Rename modules to accord with PEP-8/Twisted coding standard.
+* Rename class methods to accord with PEP-8/Twisted coding standard.
+* Increment to version 0.9.3
+
+* Reorganize package to something along the following lines:
+    rtfng
+        header
+            Version
+            Character Set
+            Font Table
+            Color Table
+            Stylesheet
+            List Table
+            Revisions
+        document
+            section
+                DONE - Section
+                Section Formatting
+                Header/Footer
+            paragraph
+                DONE - Paragraph
+                Formatting/Tabs
+                Bullets/Numbering
+                Borders/Shading
+                Objects/Frames
+                DONE - Table/Cell
+            character
+                Font/Formatting/Properties
+                Borders/Shading
+                Hilighting
+                Special Characters
+        bookmarks
+        objects
+            Pictures
+            Drawings
+        annotations
+            Footnotes
+            Comments
+        fields
+        indices
+            Index
+            Table of Contents
+* Add support for a small subset of the API that does most of what people need,
+  letting users types as few lines as possible to create RTF docs.
+* Increment to version 1.0.0.
+
+* Make classes new-style.
+* Unify the codes in constants.Languages to eliminate redundancy.
+* Increment to version 1.0.1.
+
+* Sort out the character TEXT and Text redundancy.
+* Simplify rendering along the lines of the "write" idiom.
+* Increment to version 1.0.2.
+
+* Add append() method to doc that is a dispatcher, appending to appropriate
+  attrs based on type (e.g., instead of doc.Sections.append(section), one would
+  only need to do doc.append(section)).
+* Increment to version 1.0.3.
+
+* Refactor TabPropertySet leader types into a single attribute.
+* Replace use of apply() with extended call syntax.
+* Increment to version 1.0.4.
+
+* Get parser to the point where it can parse everything the current code can
+  generate.
+* Increment to version 1.1.0.
+
+* Add more RTF-spec support to both the writer and the parser.
+* Increment to version 1.2.0.
+
+
+Completed
+---------
+
+* DONE - Rename package to pyrtfng.
+* DONE - Clean up basic white space issues (mixed tab/space, file encodings,
+    DOS characters, etc.)
+* DONE - Increment to version 0.9.0
+
+
+Issues
+------
+* Tested the initial examples; they don't seem to render properly for TextEdit
+  on Mac OS X.
+* RTF docs should not create any more structure by default than is absolutely
+  necessary:
+    o the auto-creation of the header needs to go;
+    o 
+
+Fixed
+-----
