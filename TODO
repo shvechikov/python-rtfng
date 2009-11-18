@@ -24,8 +24,6 @@ Plan
 
 * Rename modules to accord with PEP-8/Twisted coding standard.
 * Rename class methods to accord with PEP-8/Twisted coding standard.
-* Increment to version 0.9.3
-
 * Reorganize package to something along the following lines:
     rtfng
         header
