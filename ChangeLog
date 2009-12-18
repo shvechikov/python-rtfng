@@ -7,6 +7,25 @@
 
 * Updated TODO.
 
+2009.11.02
+
+* Write test of Document.Copy.
+* Add test of Document.NewSection.
+* Add .bzrignore file to ignore pending directory.
+* Add script to test coverage of code base.
+* Write test script which runs nosetest on all unit tests and doctests.
+* Centralize basic initializeDoc in tests.
+* Move comments about test strategy.
+* Delete old temp test code.
+* Comment out unused code.
+* Remove executable bit from tests so that nosetest can detect them.
+
+2009.10.30
+
+* Simplify nested if condition to one if condition.
+* Update TODO and bump version to 0.9.1.
+* Update the generate script to accept file names as parameters.
+
 2009.10.27
 
 * Convert merged_cells to unit tests.
