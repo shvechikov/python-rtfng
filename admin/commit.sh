@@ -59,7 +59,7 @@ function localCommit {
 
 function pushGoogleCode {
     echo "Pushing to Subversion now ..."
-    bzr svn-push $SVN
+    bzr push $SVN
 }
 
 function pushLaunchpad {

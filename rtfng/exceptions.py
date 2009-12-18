@@ -5,5 +5,8 @@ pyrtf-ng Errors and Exceptions
 class RTFError(Exception):
     pass
 
-class RTFParseError(RTFError):
-   "Unable to parse RTF data."
+
+class ParseError(RTFError):
+   """
+   Unable to parse the RTF data.
+   """

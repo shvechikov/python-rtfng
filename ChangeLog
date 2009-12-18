@@ -1,6 +1,28 @@
+2009.12.18
+
+* Updated the admin script to use the new bzr-svn plugin syntax.
+* Renamed the exceptions module and updated one of the contained classes.
+
 2009.11.18
 
 * Updated TODO.
+
+2009.10.27
+
+* Convert merged_cells to unit tests.
+* Fix test_pictures so that it doesn't save a temporary file.
+* Remove duplicate code in test_pictures.
+* Port picture test.
+* Fix spelling of test_charaters.py to test_characters.py.
+* Get header footer tests ported over and working.
+* Remove debug statements.
+* Write unicode test.
+
+2009.10.22
+
+* Make test_tables pass.
+* Comment out empty test_headerfooter until it's ready.
+* Complain on duplicate test method names in generateReferenceDocs.py.
 
 2008.06.11
 
