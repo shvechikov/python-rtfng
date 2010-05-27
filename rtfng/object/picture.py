@@ -112,9 +112,20 @@ class Image( RawCode ) :
         else :
             width, height = _get_jpg_dimensions( fin )
 
+        # Find scale ratio to fit an image in a page
+        # 210mmx297mm - standard A4 page size
+        # TODO: What to do with different page sizes?
+        scale_factor = 2.2
+        width_base = 210 * scale_factor
+        height_base = 297 * scale_factor
+        width_s, height_s = width / width_base, height / height_base
+        scale = max((width_s, height_s))
+        if scale < 1:
+            scale = 1
+
         codes = [ pict_type,
-                  'picwgoal%s' % (width  * 20),
-                  'pichgoal%s' % (height * 20) ]
+                  'picwgoal%d' % (width  * 20 / scale),
+                  'pichgoal%d' % (height * 20 / scale) ]
         for kwarg, code, default in [ ( 'scale_x',     'scalex', '100' ),
                                       ( 'scale_y',     'scaley', '100' ),
                                       ( 'crop_left',   'cropl',    '0' ),
